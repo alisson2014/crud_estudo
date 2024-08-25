@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta 
+        name="description"
+        content="Cadastre seus clientes com facilidade"
+    />
+    <meta 
+        name="keywords"
+        content="clientes, cadastro, fácil, rápido"
+    />
+    <meta 
+        name="author"
+        content="Alisson V"
+    />
+    <!-- Title -->
+    <title>Encontre seus clientes</title>
+
+    <!-- Bootstrap imports -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous" 
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Cabeçalho da página -->
+        <header class="d-flex align-items-center justify-content-between">
+            <h1>Cadastro de cliente</h1>
+            <button 
+                class="btn btn-primary"
+                title="Clique aqui para cadastrar um novo cliente"
+                data-toggle="modal"
+                data-target="#myModal"
+            >
+                Cadastrar cliente
+            </button>
+        </header>
+        <main>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>CEP</th>
+                            <th>Endereço</th>
+                            <th>Bairro</th>
+                            <th>Número</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <!-- Modal -->
+        <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <header class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">Novo cliente</h2>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Fechar"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </header>
+            <form id="form" class="modal-body">
+              <input
+                type="text"
+                id="name"
+                data-index="new"
+                class="modal-field"
+                placeholder="Nome do Cliente"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                class="modal-field"
+                placeholder="e-mail do Cliente"
+                required
+              />
+              <input
+                type="text"
+                id="tel"
+                class="modal-field"
+                placeholder="Celular do Cliente"
+                required
+              />
+              <input
+                type="text"
+                id="city"
+                class="modal-field"
+                placeholder="Cidade do Cliente"
+                required
+              />
+            </form>
+            <footer class="modal-footer">
+              <button type="button" class="btn btn-success" id="save">
+                Salvar
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-dismiss="modal"
+                id="cancel"
+              >
+                Cancelar
+              </button>
+            </footer>
+          </div>
+        </div>
+      </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
